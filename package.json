@@ -6,11 +6,24 @@
     "type": "module",
     "private": true,
     "scripts": {
-        "gulp": "npx gulp"
+        "gulp": "npx gulp",
+		"build": "npx gulp build"
     },
     "author": "Arthur Baileys Li",
     "license": "ISC",
     "devDependencies": {
-        "gulp": "^4.0.2"
+        "gulp": "^4.0.2",
+        "gulp-autoprefixer": "^7.0.1",
+        "gulp-clean-css": "^4.3.0",
+        "gulp-dart-sass": "^1.0.2",
+        "gulp-sourcemaps": "^3.0.0",
+        "gulp-stylelint": "^13.0.0",
+        "stylelint": "^13.9.0",
+        "stylelint-config-htmlacademy": "^0.1.4",
+        "stylelint-config-standard": "^20.0.0",
+        "stylelint-scss": "^3.18.0"
+    },
+    "dependencies": {
+        "gulp-shorthand": "^1.1.0"
     }
 }

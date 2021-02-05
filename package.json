@@ -1,0 +1,13 @@
+{
+    "name": "gulp-boilerplate ",
+    "version": "1.0.0",
+    "description": "Gulp starter template",
+    "main": "gulpfile.js",
+    "type": "module",
+    "private": true,
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Arthur Baileys Li",
+    "license": "ISC"
+}

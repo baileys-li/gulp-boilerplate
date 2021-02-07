@@ -6,7 +6,7 @@
     "type": "module",
     "private": true,
     "scripts": {
-        "gulp": "npx gulp",
+        "dev": "npx gulp",
         "build": "npx gulp build",
         "eslint": "eslint source/**/*.js"
     },
@@ -15,6 +15,7 @@
     "devDependencies": {
         "@babel/preset-env": "^7.12.13",
         "babel-loader": "^8.2.2",
+        "browser-sync": "^2.26.14",
         "circular-dependency-plugin": "^5.2.2",
         "del": "^6.0.0",
         "duplicate-package-checker-webpack-plugin": "^3.0.0",

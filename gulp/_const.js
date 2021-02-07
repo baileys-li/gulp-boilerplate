@@ -2,6 +2,7 @@ const Base = {
 	SOURCE: "./source/",
 	BUILD: "./build/",
 };
+
 export const Path = {
 	STYLE: {
 		source: Base.SOURCE + "styles/*.{sass,scss}",
@@ -18,4 +19,12 @@ export const Path = {
 		source: Base.SOURCE + "js/*.js",
 		build: Base.BUILD + "js/",
 	},
+	ICON: {
+		source: Base.SOURCE + "icons/**/*.svg",
+		build: Base.BUILD,
+	},
+	IMAGE: {
+		source: Base.SOURCE + "images/**/*.{gif,png,jpg,svg}",
+		build: Base.BUILD + "img/",
+	}
 };

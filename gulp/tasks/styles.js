@@ -11,7 +11,7 @@ import { Path } from "../_const.js";
 
 export function styles() {
 	return gulp
-		.src(Path.SASS.source)
+		.src(Path.STYLE.source)
 		.pipe(
 			stylelint({
 				failAfterError: false,
@@ -48,5 +48,5 @@ export function styles() {
 				sourcemaps.write()
 			)
 		)
-		.pipe(gulp.dest(Path.SASS.build));
+		.pipe(gulp.dest(Path.STYLE.build));
 }

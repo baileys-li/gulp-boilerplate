@@ -26,5 +26,9 @@ export const Path = {
 	IMAGE: {
 		source: Base.SOURCE + "images/**/*.{gif,png,jpg,svg}",
 		build: Base.BUILD + "img/",
+	},
+	ASSET: {
+		source: Base.SOURCE + "assets/**/*",
+		build: Base.BUILD,
 	}
 };

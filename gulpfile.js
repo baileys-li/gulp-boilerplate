@@ -1,7 +1,9 @@
 import gulp from "gulp";
+import { setDevelopment, setProduction } from "./gulp/tasks/setMode.js";
 import { styles } from "./gulp/tasks/styles.js";
 import { pages } from "./gulp/tasks/pages.js";
-import { setDevelopment, setProduction } from "./gulp/tasks/setMode.js";
+import { scripts } from "./gulp/tasks/scripts.js";
 
-export const build = gulp.series(setProduction, pages, styles);
-export default gulp.series(setDevelopment, pages, styles);
+
+export const build = gulp.series(setProduction, pages, styles, scripts);
+export default gulp.series(setDevelopment, pages, styles, scripts);

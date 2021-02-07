@@ -9,7 +9,7 @@ import { Path } from "../_const.js";
 
 export function pages() {
 	return gulp
-		.src(Path.PAGES.source)
+		.src(Path.PAGE.source)
 		.pipe(pugLinter({ reporter: "default" }))
 		.pipe(
 			gulpIf(
@@ -21,5 +21,5 @@ export function pages() {
 		.pipe(htmlValidator.analyzer())
 		.pipe(htmlValidator.reporter())
 		.pipe(bemValidator())
-		.pipe(gulp.dest(Path.PAGES.build));
+		.pipe(gulp.dest(Path.PAGE.build));
 }

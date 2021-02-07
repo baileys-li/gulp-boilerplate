@@ -9,9 +9,13 @@ export const Path = {
 		build: Base.BUILD + "css/",
 	},
 
-	PAGES: {
+	PAGE: {
 		source: Base.SOURCE + "pages/*.pug",
 		all: Base.SOURCE + "pages/**/*.pug",
 		build: Base.BUILD,
+	},
+	SCRIPT: {
+		source: Base.SOURCE + "js/*.js",
+		build: Base.BUILD + "js/",
 	},
 };

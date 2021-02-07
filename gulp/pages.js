@@ -5,7 +5,7 @@ import { htmlValidator } from "gulp-w3c-html-validator";
 import bemValidator from "gulp-html-bem-validator";
 import gulpIf from "gulp-if";
 
-import { Path } from "../_const.js";
+import { Path } from "./_const.js";
 
 export function pages() {
 	return gulp

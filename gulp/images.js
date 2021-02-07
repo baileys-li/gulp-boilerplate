@@ -2,7 +2,7 @@ import gulp from "gulp";
 import imagemin from "gulp-imagemin";
 import webp from "gulp-webp";
 
-import { Path } from "../_const.js";
+import { Path } from "./_const.js";
 
 export const images = gulp.parallel(imageMinify, webpCopy);
 

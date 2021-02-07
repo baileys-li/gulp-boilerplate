@@ -7,7 +7,7 @@ import shorthand from "gulp-shorthand";
 import clean from "gulp-clean-css";
 import gulpIf from "gulp-if";
 
-import { Path } from "../_const.js";
+import { Path } from "./_const.js";
 
 export function styles() {
 	return gulp

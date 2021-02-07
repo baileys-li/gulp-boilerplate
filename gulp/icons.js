@@ -1,7 +1,7 @@
 import gulp from "gulp";
 import svgstore from "gulp-svgstore";
 
-import { Path } from "../_const.js";
+import { Path } from "./_const.js";
 
 export function icons() {
 	return gulp

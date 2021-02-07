@@ -3,7 +3,7 @@ import webpack from "webpack-stream";
 import CircularDependencyPlugin from "circular-dependency-plugin";
 import DuplicatePackageCheckerPlugin from "duplicate-package-checker-webpack-plugin";
 
-import { Path } from "../_const.js";
+import { Path } from "./_const.js";
 
 export function scripts() {
 	return gulp

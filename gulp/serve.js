@@ -8,7 +8,7 @@ import { icons } from "./icons.js";
 import { images } from "./images.js";
 import { assets } from "./assets.js";
 
-import { Path } from "../_const.js";
+import { Path } from "./_const.js";
 
 export async function serve() {
 	sync.init({

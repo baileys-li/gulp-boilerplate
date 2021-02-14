@@ -1,0 +1,65 @@
+@mixin reset-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+@mixin reset-scroll {
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+	scrollbar-color: transparent transparent;
+
+	&::-webkit-scrollbar {
+		width: 0;
+		height: 0;
+	}
+	&::-webkit-scrollbar-track {
+		background: transparent;
+	}
+	&:-webkit-scrollbar-thumb {
+		background: transparent;
+		border: none;
+	}
+}
+
+@mixin flex-row($flex-min: 20ch, $row-gap: 1rem, $column-gap: $row-gap) {
+	display: flex;
+	flex-wrap: wrap;
+	margin: (-$column-gap / 2) (-$row-gap / 2);
+
+	& > * {
+		margin: ($column-gap / 2) ($row-gap / 2);
+		flex: {
+			basis: $flex-min;
+			grow: 1;
+		}
+	}
+}
+
+@mixin grid-row($grid-min: 20ch, $row-gap: 1rem, $column-gap: $row-gap) {
+	display: grid;
+	grid-gap: $row-gap $column-gap;
+	gap: $row-gap $column-gap;
+	grid-template-columns: repeat(auto-fit, minmax($grid-min, 1fr));
+}
+
+@mixin focus-hover {
+	&:focus {
+		outline: none;
+	}
+
+	&:hover,
+	&:focus {
+		@content;
+	}
+}
+
+@mixin detail-marker-reset {
+	& > summary::-webkit-details-marker {
+		display: none;
+	}
+	/* Remove Firefox marker */
+	& > summary {
+		list-style: none;
+	}
+}

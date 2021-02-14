@@ -36,6 +36,7 @@
         "gulp-svgstore": "^7.0.1",
         "gulp-w3c-html-validator": "^3.0.0",
         "gulp-webp": "^4.0.1",
+        "normalize.css": "^8.0.1",
         "stylelint": "^13.9.0",
         "stylelint-config-htmlacademy": "^0.1.4",
         "stylelint-config-standard": "^20.0.0",

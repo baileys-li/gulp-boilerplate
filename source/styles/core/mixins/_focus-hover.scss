@@ -1,0 +1,12 @@
+// * Reset focus outline and make same the focus and hover states
+
+@mixin focus-hover {
+	&:focus {
+		outline: none;
+	}
+
+	&:hover,
+	&:focus {
+		@content;
+	}
+}

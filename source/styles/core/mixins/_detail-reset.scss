@@ -1,0 +1,11 @@
+// * Reset focus for detail tag
+
+@mixin detail-reset {
+	& > summary::-webkit-details-marker {
+		display: none;
+	}
+	/* Remove Firefox marker */
+	& > summary {
+		list-style: none;
+	}
+}

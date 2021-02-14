@@ -3,13 +3,14 @@ import sass from "gulp-dart-sass";
 import autoprefixer from "gulp-autoprefixer";
 import shorthand from "gulp-shorthand";
 import clean from "gulp-clean-css";
-
+import plumber from "gulp-plumber";
 import { Path } from "./_const.js";
 
 export function styles() {
 	if (process.env.NODE_ENV === "development") {
 		return gulp
 			.src(Path.STYLE.source, { sourcemaps: true })
+			.pipe(plumber())
 			.pipe(
 				autoprefixer({
 					cascade: true,
@@ -18,10 +19,9 @@ export function styles() {
 			.pipe(
 				sass({
 					outputStyle: "expanded",
-					indentType: "tab",
+					indentType: "tab"
 				}).on("error", sass.logError)
 			)
-			.pipe(shorthand())
 			.pipe(gulp.dest(Path.STYLE.build, { sourcemaps: "." }));
 	} else {
 		return gulp

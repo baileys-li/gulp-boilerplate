@@ -1,0 +1,17 @@
+// * Makes row with flexes with certain gap and minimal width of column
+
+/* Overflow elements will be transit on next line grow their width */
+
+@mixin flex-row($flex-min: 20ch, $row-gap: 1rem, $column-gap: $row-gap) {
+	display: flex;
+	flex-wrap: wrap;
+	margin: (-$column-gap / 2) (-$row-gap / 2);
+
+	& > * {
+		margin: ($column-gap / 2) ($row-gap / 2);
+		flex: {
+			basis: $flex-min;
+			grow: 1;
+		}
+	}
+}

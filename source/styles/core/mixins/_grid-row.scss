@@ -1,0 +1,7 @@
+// * Make row with grid help
+@mixin grid-row($grid-min: 20ch, $row-gap: 1rem, $column-gap: $row-gap) {
+	display: grid;
+	grid-gap: $row-gap $column-gap;
+	gap: $row-gap $column-gap;
+	grid-template-columns: repeat(auto-fit, minmax($grid-min, 1fr));
+}

@@ -6,9 +6,13 @@ import { webpackConfig } from "../webpack.config.js";
 import { Path } from "./_const.js";
 
 export function scripts() {
-	console.log(webpackConfig);
 	return gulp
 		.src(Path.SCRIPT.source)
-		.pipe(webpackStream(webpackConfig, webpack))
+		.pipe(
+			webpackStream(
+				{ ...webpackConfig, mode: process.env.NODE_ENV },
+				webpack
+			)
+		)
 		.pipe(gulp.dest(Path.SCRIPT.build));
 }

@@ -23,11 +23,11 @@ export const Path = {
 		build: Base.BUILD,
 	},
 	IMAGE: {
-		source: Base.SOURCE + "images/**/*.{gif,png,jpg,svg}",
+		source: Base.SOURCE + "images/**/*",
 		build: Base.BUILD + "img/",
 	},
 	ASSET: {
 		source: Base.SOURCE + "assets/**/*",
 		build: Base.BUILD,
-	}
+	},
 };

@@ -4,6 +4,8 @@ import postcss from "gulp-postcss";
 
 import autoprefixer from "autoprefixer";
 import cssnano from "cssnano";
+import csso from "postcss-csso";
+
 import { Path } from "./_const.js";
 
 export function styles() {
@@ -16,6 +18,7 @@ export function styles() {
 			cssnano({
 				preset: "advanced",
 			}),
+			csso()
 		];
 
 	return gulp

@@ -32,6 +32,7 @@ export function styles() {
 			sass({
 				outputStyle: isDev ? "expanded" : "compressed",
 				indentType: "tab",
+				includePaths: ["node_modules"]
 			}).on("error", sass.logError)
 		)
 		.pipe(postcss(pluginsPostCSS))

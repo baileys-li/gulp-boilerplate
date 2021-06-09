@@ -41,6 +41,7 @@
         "normalize.css": "^8.0.1",
         "postcss": "^8.3.0",
         "postcss-csso": "^5.0.1",
+        "postcss-media-minmax": "^5.0.0",
         "stylelint": "^13.9.0",
         "stylelint-config-htmlacademy": "^0.1.4",
         "stylelint-config-standard": "^20.0.0",

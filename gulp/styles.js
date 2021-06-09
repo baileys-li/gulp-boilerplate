@@ -1,25 +1,28 @@
 import gulp from "gulp";
-import sass from "gulp-dart-sass";
-import postcss from "gulp-postcss";
 
+import sass from "gulp-dart-sass";
+
+import postcss from "gulp-postcss";
 import autoprefixer from "autoprefixer";
 import cssnano from "cssnano";
 import csso from "postcss-csso";
+import minmax from "postcss-media-minmax";
 
-import { Path } from "./_const.js";
+import {
+	Path
+} from "./_const.js";
 
 export function styles() {
 	const isDev = process.env.NODE_ENV === "development";
 
-	const pluginsPostCSS = isDev
-		? []
-		: [
-			autoprefixer(),
-			cssnano({
-				preset: "advanced",
-			}),
-			csso()
-		];
+	const pluginsPostCSS = isDev ? [minmax()] : [
+		minmax(),
+		autoprefixer(),
+		cssnano({
+			preset: "advanced",
+		}),
+		csso()
+	];
 
 	return gulp
 		.src(Path.STYLE.source, {

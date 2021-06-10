@@ -3,9 +3,9 @@ import webpackStream from "webpack-stream";
 import webpack from "webpack";
 import { webpackConfig } from "../webpack.config.js";
 
-import { Path } from "./_const.js";
+import Path from "./_const.js";
 
-export function scripts() {
+export default function scripts() {
 	return gulp
 		.src(Path.SCRIPT.source)
 		.pipe(

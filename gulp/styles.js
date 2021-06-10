@@ -8,21 +8,21 @@ import cssnano from "cssnano";
 import csso from "postcss-csso";
 import minmax from "postcss-media-minmax";
 
-import {
-	Path
-} from "./_const.js";
+import Path from "./_const.js";
 
-export function styles() {
+export default function styles() {
 	const isDev = process.env.NODE_ENV === "development";
 
-	const pluginsPostCSS = isDev ? [minmax()] : [
-		minmax(),
-		autoprefixer(),
-		cssnano({
-			preset: "advanced",
-		}),
-		csso()
-	];
+	const pluginsPostCSS = isDev ?
+		[minmax()] :
+		[
+			minmax(),
+			autoprefixer(),
+			cssnano({
+				preset: "advanced",
+			}),
+			csso(),
+		];
 
 	return gulp
 		.src(Path.STYLE.source, {
@@ -32,7 +32,7 @@ export function styles() {
 			sass({
 				outputStyle: isDev ? "expanded" : "compressed",
 				indentType: "tab",
-				includePaths: ["node_modules"]
+				includePaths: ["node_modules"],
 			}).on("error", sass.logError)
 		)
 		.pipe(postcss(pluginsPostCSS))

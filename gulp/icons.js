@@ -1,9 +1,9 @@
 import gulp from "gulp";
 import svgstore from "gulp-svgstore";
 
-import { Path } from "./_const.js";
+import Path from "./_const.js";
 
-export function icons() {
+export default function icons() {
 	return gulp
 		.src(Path.ICON.source)
 		.pipe(

@@ -3,9 +3,9 @@ const Base = {
 	BUILD: "./build/",
 };
 
-export const Path = {
+const Path = {
 	STYLE: {
-		source: Base.SOURCE + "styles/**/*.{sass,scss}",
+		source: Base.SOURCE + "styles/**/*.{sass,scss,pcss}",
 		build: Base.BUILD + "css/",
 	},
 
@@ -31,3 +31,5 @@ export const Path = {
 		build: Base.BUILD,
 	},
 };
+
+export default Path;

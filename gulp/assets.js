@@ -1,6 +1,6 @@
 import gulp from "gulp";
-import { Path } from "./_const.js";
+import Path from "./_const.js";
 
-export function assets() {
+export default function assets() {
 	return gulp.src(Path.ASSET.source).pipe(gulp.dest(Path.ASSET.build));
 }

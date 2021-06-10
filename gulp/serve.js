@@ -1,16 +1,16 @@
 import gulp from "gulp";
 import sync from "browser-sync";
 
-import { styles } from "./styles.js";
-import { pages } from "./pages.js";
-import { scripts } from "./scripts.js";
-import { icons } from "./icons.js";
-import { images } from "./images.js";
-import { assets } from "./assets.js";
+import styles from "./styles.js";
+import pages from "./pages.js";
+import scripts from "./scripts.js";
+import icons from "./icons.js";
+import images from "./images.js";
+import assets from "./assets.js";
 
-import { Path } from "./_const.js";
+import Path from "./_const.js";
 
-export async function serve() {
+export default async function serve() {
 	sync.init({
 		server: Path.PAGE.build,
 		notify: true,

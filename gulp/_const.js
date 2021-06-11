@@ -8,7 +8,6 @@ const Path = {
 		source: Base.SOURCE + "styles/**/*.{sass,scss,pcss}",
 		build: Base.BUILD + "css/",
 	},
-
 	PAGE: {
 		source: Base.SOURCE + "pages/*.pug",
 		all: Base.SOURCE + "pages/**/*.pug",
@@ -30,6 +29,12 @@ const Path = {
 		source: Base.SOURCE + "assets/**/*",
 		build: Base.BUILD,
 	},
+	DATA: {
+		source: Base.SOURCE + "data/*.json",
+		hidden: Base.SOURCE + "data/_*.json",
+		build: Base.BUILD + "data/",
+		combined: "temp/"
+	}
 };
 
 export default Path;

@@ -1,6 +1,7 @@
 import gulp from "gulp";
 import imagemin from "gulp-imagemin";
 import webp from "gulp-webp";
+import newer from "gulp-newer";
 
 import Path from "./_const.js";
 
@@ -9,6 +10,7 @@ export default gulp.parallel(imageMinify, webpCopy);
 function webpCopy() {
 	return gulp
 		.src(Path.IMAGE.source + ".{gif,png,jpg}")
+		.pipe(newer(Path.IMAGE.build))
 		.pipe(
 			webp({
 				quality: 80,
@@ -20,6 +22,7 @@ function webpCopy() {
 function imageMinify() {
 	return gulp
 		.src(Path.IMAGE.source + ".{gif,png,jpg,svg}")
+		.pipe(newer(Path.IMAGE.build))
 		.pipe(
 			imagemin([
 				imagemin.gifsicle({

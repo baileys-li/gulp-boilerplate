@@ -13,9 +13,7 @@
     "author": "Arthur Baileys Li",
     "license": "ISC",
     "devDependencies": {
-        "@babel/preset-env": "^7.12.13",
         "autoprefixer": "^9.8.6",
-        "babel-loader": "^8.2.2",
         "browser-sync": "^2.26.14",
         "circular-dependency-plugin": "^5.2.2",
         "cssnano": "^5.0.5",
@@ -40,6 +38,7 @@
         "gulp-w3c-html-validator": "^3.0.0",
         "gulp-webp": "^4.0.1",
         "normalize.css": "^8.0.1",
+        "optimize-plugin": "^1.0.0",
         "postcss": "^8.3.0",
         "postcss-csso": "^5.0.1",
         "postcss-media-minmax": "^5.0.0",
@@ -47,7 +46,7 @@
         "stylelint-config-htmlacademy": "^0.1.4",
         "stylelint-config-standard": "^20.0.0",
         "stylelint-scss": "^3.18.0",
-        "webpack": "^5.24.2",
+        "webpack": "^5.39.0",
         "webpack-stream": "^6.1.2"
     }
 }

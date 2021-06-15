@@ -1,7 +1,7 @@
 import gulp from "gulp";
 import webpackStream from "webpack-stream";
 import webpack from "webpack";
-import { webpackConfig } from "../webpack.config.js";
+import webpackConfig from "../webpack.config.js";
 
 import Path from "./_const.js";
 

@@ -1,16 +1,3 @@
-# OS files and folders
-.DS_Store
-Thumbs.db
-
-# Editor files
-.idea
-*.sublime*
-.vscode
-
-# Support files
-*.log*
-node_modules/
-
 # Project's Build Folder
 build/
 temp/

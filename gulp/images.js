@@ -1,48 +1,28 @@
 import gulp from "gulp";
-import imagemin from "gulp-imagemin";
-import webp from "gulp-webp";
-import newer from "gulp-newer";
+import squoosh from "gulp-squoosh";
+import cache from "gulp-cache";
+import path from "path";
 
 import Path from "./_const.js";
 
-export default gulp.parallel(imageMinify, webpCopy);
-
-function webpCopy() {
+function processImages() {
 	return gulp
-		.src(Path.IMAGE.source + ".{gif,png,jpg}")
-		.pipe(newer(Path.IMAGE.build))
+		.src(Path.IMAGE.source)
 		.pipe(
-			webp({
-				quality: 80,
-			})
+			cache(
+				squoosh(({ filePath }) => ({
+					encodeOptions: {
+						avif: {},
+						webp: { quality: 80 },
+						// wp2: {}
+						...(path.extname(filePath) === ".png"
+							? { oxipng: {} }
+							: { mozjpeg: {} }),
+					},
+				}))
+			)
 		)
 		.pipe(gulp.dest(Path.IMAGE.build));
 }
 
-function imageMinify() {
-	return gulp
-		.src(Path.IMAGE.source + ".{gif,png,jpg,svg}")
-		.pipe(newer(Path.IMAGE.build))
-		.pipe(
-			imagemin([
-				imagemin.gifsicle({
-					interlaced: true
-				}),
-				imagemin.mozjpeg({
-					quality: 80,
-					progressive: true,
-				}),
-				imagemin.optipng({
-					optimizationLevel: 5
-				}),
-				imagemin.svgo({
-					plugins: [{
-						removeViewBox: true
-					}, {
-						cleanupIDs: false
-					}],
-				}),
-			])
-		)
-		.pipe(gulp.dest(Path.IMAGE.build));
-}
+export default processImages;

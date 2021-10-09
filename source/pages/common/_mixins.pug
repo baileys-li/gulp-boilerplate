@@ -1,0 +1,6 @@
+mixin pasteImage({src, width=false, height=false, alt=false, className=false, pictureClass=false})
+	-const name = src.split('.')[0];
+	picture(class=pictureClass)
+		source(srcset=`img/${name}.avif`, type="image/avif")
+		source(srcset=`img/${name}.webp`, type="image/webp")
+		img(class=className, src=`img/${src}`, alt=alt, width=width, height=height)

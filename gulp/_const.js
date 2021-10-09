@@ -29,12 +29,6 @@ const Path = {
 		source: Base.SOURCE + "assets/**/*",
 		build: Base.BUILD,
 	},
-	DATA: {
-		source: Base.SOURCE + "data/*.json",
-		hidden: Base.SOURCE + "data/_*.json",
-		build: Base.BUILD + "data/",
-		combined: "temp/"
-	}
 };
 
 export default Path;

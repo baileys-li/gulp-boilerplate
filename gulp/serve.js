@@ -24,7 +24,6 @@ export default async function serve() {
 	gulp.watch(Path.ICON.source, gulp.series(icons, readyReload));
 	gulp.watch(Path.IMAGE.source, gulp.series(images, readyReload));
 	gulp.watch(Path.ASSET.source, gulp.series(assets, readyReload));
-	gulp.watch(Path.DATA.source, gulp.series(pages, assets, readyReload));
 }
 
 async function readyReload() {

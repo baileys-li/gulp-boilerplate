@@ -1,6 +1,7 @@
 import gulp from "gulp";
 import pug from "gulp-pug";
 import pugBEM from "pug-bem";
+import { isDev } from "./mode.mjs";
 import Path from "./_const.js";
 
 export const compilePug = () =>
@@ -8,7 +9,7 @@ export const compilePug = () =>
 		.src(Path.PAGE.source)
 		.pipe(
 			pug({
-				pretty: process.env.NODE_ENV === "development",
+				pretty: isDev(),
 				plugins: [pugBEM],
 			})
 		)

@@ -5,7 +5,7 @@ const Base = {
 
 const Path = {
 	STYLE: {
-		source: Base.SOURCE + "styles/**/*.{sass,scss,pcss}",
+		source: Base.SOURCE + "styles/*.{postcss,pcss}",
 		build: Base.BUILD + "css/",
 	},
 	PAGE: {

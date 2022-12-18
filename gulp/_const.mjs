@@ -15,13 +15,14 @@ const Path = {
 		build: `${Base.BUILD}/css/`,
 	},
 	PAGE: {
-		source: `${Base.SOURCE}/pages/*.pug}`,
+		source: `${Base.SOURCE}/pages/*.pug`,
 		watch: `${Base.SOURCE}/pages/**/*.pug`,
-		build: Base.BUILD,
+		build: `${Base.BUILD}/`
 	},
 	SCRIPT: {
-		source: Base.SOURCE + "js/*.js",
-		build: Base.BUILD + "js/",
+		source:  `${Base.SOURCE}/typescript/*.ts`,
+		watch: `${Base.SOURCE}/typescript/**/*.{js,mjs,cjs,ts}`,
+		build: `${Base.BUILD}/js/`,
 	},
 	ICON: {
 		source: Base.SOURCE + "icons/**/*.svg",

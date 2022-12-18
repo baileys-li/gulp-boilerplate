@@ -4,7 +4,7 @@ import postcss from "gulp-postcss";
 import cssnano from "cssnano";
 import csso from "postcss-csso";
 
-import Path from "./_const.js";
+import Path from "./_const.mjs";
 import { isDev as isDevelopment } from "./mode.mjs";
 import calc from "postcss-calc";
 import logical from "postcss-logical";

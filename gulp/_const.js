@@ -1,16 +1,22 @@
 const Base = {
-	SOURCE: "./source/",
-	BUILD: "./build/",
+	SOURCE: "source",
+	BUILD: "build",
+};
+
+const Extension = {
+	CSS: "postcss,pcss,css,scss"
 };
 
 const Path = {
 	STYLE: {
-		source: Base.SOURCE + "styles/*.{postcss,pcss}",
-		build: Base.BUILD + "css/",
+		watch: `${Base.SOURCE}/styles/**/*.{${Extension.CSS}}`,
+		source: `${Base.SOURCE}/styles/*.{${Extension.CSS}}`,
+		common: `${Base.SOURCE}/styles/common/`,
+		build: `${Base.BUILD}/css/`,
 	},
 	PAGE: {
-		source: Base.SOURCE + "pages/*.pug",
-		all: Base.SOURCE + "pages/**/*.pug",
+		source: `${Base.SOURCE}/pages/*.pug}`,
+		watch: `${Base.SOURCE}/pages/**/*.pug`,
 		build: Base.BUILD,
 	},
 	SCRIPT: {

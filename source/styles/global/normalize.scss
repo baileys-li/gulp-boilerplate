@@ -1,0 +1,97 @@
+@use "fonts";
+@use "selectors";
+
+// * Use a more-intuitive box-sizing model. *
+*,
+::before,
+::after {
+	box-sizing: border-box;
+}
+
+
+// * Improve media defaults *
+#{selectors.$media} {
+  display: block;
+  max-width: 100%;
+}
+
+// * Remove built-in form typography styles *
+#{selectors.$formElements}  {
+  font: inherit;
+	margin: 0;
+}
+
+// * Avoid text overflows *
+#{selectors.$text}  {
+  overflow-wrap: break-word;
+}
+
+
+
+hr {
+	height: 0; // Add the correct height in Firefox.
+	color: inherit; // correct the inheritance of border color in Firefox. https://bugzilla.mozilla.org/show_bug.cgi?id=190655
+}
+
+
+// * Add the correct text decoration in Chrome, Edge, and Safari. *
+abbr[title] {
+	text-decoration: underline dotted; //
+}
+
+
+// * Add the correct font weight in Edge and Safari. *
+b,
+strong {
+	font-weight: bolder;
+}
+
+
+code,
+kbd,
+samp,
+pre {
+	font-family: fonts.$mono;
+	font-size: 1em;
+}
+
+
+// * Add the correct font size in all browsers. *
+small {
+	font-size: 80%;
+}
+
+
+// * Add the correct display in Chrome and Safari. *
+summary {
+	display: list-item;
+}
+
+
+// * Prevent 'sub' and 'sup' elements from affecting the line height in all browsers. *
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+sup {
+	top: -0.5em;
+}
+
+
+/**
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+*/
+
+table {
+	text-indent: 0; /* 1 */
+	border-color: inherit; /* 2 */
+}

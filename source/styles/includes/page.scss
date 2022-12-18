@@ -1,0 +1,47 @@
+@use 'fonts';
+@use 'colors';
+
+.page {
+	tab-size: 4; // Use a more readable tab size (opinionated).
+	text-size-adjust: 100%; // Prevent adjustments of font size after orientation changes in iOS.
+
+
+	font-family: fonts.$main;
+
+	background-color: colors.$light;
+	color: colors.$dark;
+
+	scrollbar-gutter: stable;
+
+	@media (prefers-color-scheme: dark) {
+		background-color: colors.$dark;
+		color: colors.$light;
+	}
+	&, &__body {
+		margin: 0;
+		padding: 0;
+	}
+
+	&__body {
+		min-height: 100vh;
+		min-height: -webkit-fill-available;
+
+		margin: 0;
+
+		line-height: 1.5; // Correct the line height in all browsers to more accessible
+
+		-webkit-font-smoothing: antialiased; //  Improve text rendering
+	}
+
+
+	&__hidden {
+		clip: rect(0 0 0 0);
+		clip-path: inset(50%);
+		height: 1px;
+		overflow: hidden;
+		position: absolute;
+		white-space: nowrap;
+		width: 1px;
+	}
+}
+

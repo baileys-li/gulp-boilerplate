@@ -1,0 +1,12 @@
+@use "variables";
+@use "media";
+
+:root {
+	--side-offset: clamp(20px, 5vw, #{variables.$tablet-offset});
+
+	@media #{media.$desktop} {
+		--side-offset: calc(
+			100 / 2 - #{variables.$maxContentW * 0.5} - var(--scrollbar-width, 0px) / 2
+		);
+	}
+}
